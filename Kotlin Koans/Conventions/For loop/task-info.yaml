@@ -11,7 +11,7 @@ files:
       length: 51
       offset: 0
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: |-
       class DateRange(val start: MyDate, val end: MyDate) : Iterable<MyDate> {

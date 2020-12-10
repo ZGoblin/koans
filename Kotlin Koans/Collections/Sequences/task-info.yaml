@@ -5,7 +5,7 @@ files:
   visible: true
   placeholders:
   - offset: 193
-    length: 6
+    length: 91
     placeholder_text: TODO()
     initial_state:
       length: 6
@@ -20,28 +20,28 @@ files:
                   .filter(Order::isDelivered)
                   .flatMap { it.products.asSequence() }
                   .maxBy(Product::price)
-  - offset: 393
-    length: 6
+  - offset: 478
+    length: 100
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 393
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: |-
       return customers
                   .asSequence()
                   .flatMap(Customer::getOrderedProducts)
                   .count { it == product }
-  - offset: 466
-    length: 6
+  - offset: 636
+    length: 57
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 466
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: orders.flatMap(Order::products).asSequence()
   text: |

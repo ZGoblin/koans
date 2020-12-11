@@ -5,14 +5,14 @@ files:
   visible: true
   placeholders:
   - offset: 193
-    length: 91
+    length: 117
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 193
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       return customer
                   .orders
@@ -20,21 +20,21 @@ files:
                   .filter(Order::isDelivered)
                   .flatMap { it.products.asSequence() }
                   .maxBy(Product::price)
-  - offset: 478
-    length: 100
+  - offset: 504
+    length: 93
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 393
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       return customers
                   .asSequence()
                   .flatMap(Customer::getOrderedProducts)
                   .count { it == product }
-  - offset: 636
+  - offset: 655
     length: 57
     placeholder_text: TODO()
     initial_state:
@@ -42,7 +42,7 @@ files:
       offset: 466
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: orders.flatMap(Order::products).asSequence()
   text: |
     // Find the most expensive product among all the delivered products
@@ -175,5 +175,8 @@ files:
         override fun toString() = name
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Fri, 11 Dec 2020 20:05:05 UTC
 record: -1
